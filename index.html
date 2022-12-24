@@ -1,149 +1,16 @@
+
 <!DOCTYPE html>
+
 <html>
     <head>
-        <title>Trabalho IDW - Pedro Betti</title>
         <meta charset="utf-8">
         <style>
             body{
-                background-image: url(https://www.supercars.net/blog/wp-content/uploads/2020/10/2020-Audi-R8-V10-RWD-011-2160-scaled.jpg);
-                background-size:cover;
-            }
-            #geral{
-                margin-top: 5%;
-                border: 3px solid black;
-                border-radius: 10px;
-            }
-            #main{
-                background-color: rgba(128, 128, 128, 0.818);
-                border: 1px solid black;
-                text-align: center;
-            }
-            #header{
-                background-color: coral;
-                border: 1px solid black;
-                text-align: center;
-            }
-            #nav{
-                background-color: lightblue;
-                border: 1px solid black;
-                text-align: center;
-            }
-            li{
-                display: inline;
-                list-style-type: none;
-                border: 5px solid black;
-                background-color: aliceblue;
-                border-radius: 10px;
-            }
-            #listafinal{
-                background-color: coral;
-                border: 1px solid black;
-            }
-            table{
-                margin-left: auto;
-                margin-right: auto;
-                border: 5px solid black;
-                border-radius: 10px;
-            }
-            #footer{
-                background-color: rgba(173, 216, 230, 0.758);
-                border: 1px solid black;
-                text-align: center;
-                height: 150px;
+                background-image: url(https://avatars.githubusercontent.com/u/121320153?s=200&v=4);
+                background-color: black;
             }
         </style>
-        <script>
-            carros = []
-            function carro(marca, modelo, cor){
-                this.marca = marca
-                this.modelo = modelo
-                this.cor = cor
-
-                this.troca = function(troca){
-                    this.cor = troca
-                }
-            }
-
-            function cadastrar(){
-                var l = new carro(marca.value, modelo.value, cor.value)
-                carros.push(l)
-                alert("Seu carro foi cadastrado com sucesso!")
-                listar(marca.value)
-                marca.value = ""
-                modelo.value = ""
-                cor.value = ""
-            }
-
-            function listar(marca){
-                var i
-                var divliv = document.getElementById("listafinal")
-                var conteudo = "<table>"
-                conteudo += "<tr><th>Marca</th><th>Modelo</th><th>Cor</th></tr>"
-                for(i = 0; i < carros.length; i++){
-                    if(carros[i].marca == marca){
-                        conteudo += "<tr><td>"+carros[i].marca+"    </td>"
-                        conteudo += "<td>"+carros[i].modelo+"   </td>"
-                        conteudo += "<td>"+carros[i].cor+"  </td>"
-                        conteudo += "<td><a href='#troca' onclick='trocaCor("+i+")'>Trocar a cor</a></td></tr>"
-                    }
-                }
-                conteudo += "</table>"
-                divliv.innerHTML = conteudo
-            }
-
-            function trocaCor(i){
-                troca = window.prompt("Para qual cor deseja trocar? ")
-	            carros[i].troca(troca)
-	            listar(carros[i].marca)
-            }
-        </script>
     </head>
     <body>
-        <div id="geral">
-            <header>
-                <div id="header">
-                    <h1>Trabalho IDW - Pedro Betti</h1>
-                </div>
-            </header>
-            <nav>
-                <div id="nav">
-                    <ul>
-                        <li><a href="#audi" id="Audi" onclick="listar(this.innerHTML)">Audi</a></li>
-                        <li><a href="#nissan" id="Nissan" onclick="listar(this.innerHTML)">Nissan</a></li>
-                        <li><a href="#renault" id="Renault" onclick="listar(this.innerHTML)">Renault</a></li>
-                        <li><a href="#suzuki" id="Suzuki" onclick="listar(this.innerHTML)">Suzuki</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div id="listafinal">
-    
-            </div>
-            <section>
-                <div id="main">
-                    <h2>Cadastro de carros: </h2><br>
-                    <form id="forms">
-                        <label for="marca">Marca: </label>
-                        <select id="marca">
-                            <option value="">Selecione a Marca</option>
-                            <option value="Audi">Audi</option>
-                            <option value="Nissan">Nissan</option>
-                            <option value="Renault">Renault</option>
-                            <option value="Suzuki">Suzuki</option>
-                        </select><br><br>
-                        <!--<input type="text" id="marca"><br>-->
-                        <label for="modelo">Modelo: </label><input type="text" id="modelo"><br><br>
-                        <label for="cor">Cor: </label><input type="text" id="cor"><br><br>
-                        <button type="button" onclick="cadastrar()">Cadastrar Carro</button><br><br>
-                    </form>
-                </div>
-            </section>
-            <footer>
-                <div id="footer">
-                    <img src="https://lcv.fee.unicamp.br/images/team/AgordWeb.jpg" height="150px" align="left">
-                    <img src="https://i1.rgstatic.net/ii/profile.image/1043696027971584-1625847932201_Q512/Tatiana-Almeida-16.jpg" height="150px" align="right">
-                    <h3>Trabalho feito por Pedro Malavasi Betti</h3>
-                </div>
-            </footer>
-        </div>
     </body>
 </html>
