@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta rel="icon" href="" class="">
+    <title>Estulidarte</title>
+</head>
+
+<body>
+
+    <header class="cabecaokk">
+        <div class="logo">
+            <a href="https://portal.cmp.ifsp.edu.br/" target="_blank"><img src="ifsp.png"
+                    class="icon"></a>
+        </div>
+
+
+    </header>
+
+    <div class="group">
+        <form>
+            <div class="group">
+                <label for="nome">Livro:</label>
+                <input type="text" class="" id="nome">
+            </div>
+            <div class="group">
+                <label for="genero">Gênero:</label>
+                <select id="genero">
+                    <option value="">--Escolha um gênero--</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ficcao">Ficção</option>
+                    <option value="Misterio">Mistério</option>
+                </select>
+            </div>
+            <div class="group">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor">
+            </div>
+            <div class="group">
+                <label for="avaliacao">Avaliação:</label>
+                <input type="text" id="avaliacao">
+            </div>
+            <div class="botão">
+                <button type="button" class="btn" onclick="matricular()">Matricular</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="corpo">
+
+
+
+        <div class="turma">
+           
+                <a href="#" onclick="listar(this.innerHTML)">MOSTRAR</a>
+            
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="content">
+
+        <div id="list"></div>
+
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+
+</html>
